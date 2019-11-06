@@ -1,0 +1,16 @@
+---
+name: lab01
+break: true
+indent: 4
+---
+src:
+    isPrime.py:
+        ConfirmFileExists
+        MatchFileFragment --fragment "for" --count 2
+        MatchFileFragment --fragment "if" --count 2
+
+output:
+    results.md:
+        CountMarkdownTags --tag "code_block" --count 1 --exact
+
+CountCommits --count 5
